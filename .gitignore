@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+
+# Entornos virtuales
+venv/
+env/
+ENV/
+.venv/
+
+# Archivos de configuración del entorno
+*.env
+*.env.*
+
+# Archivos de base de datos
+*.sqlite3
+
+# Archivos de logs
+*.log
+
+# Archivos de VS Code
+.vscode/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Django migrations (puedes mantenerlos si ya están controlados)
+**/migrations/__pycache__/
+**/migrations/*.pyc
+
+# Compilados
+*.pyo
+*.pyd
+*.pdb
+
+# Archivos de test temporales
+htmlcov/
+.coverage
+.tox/
+.nox/
+
+# Archivos de distribución
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Archivos de Git
+*.orig
+
+# Archivos de lock y caché
+pip-log.txt
+pip-delete-this-directory.txt
