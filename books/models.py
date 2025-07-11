@@ -8,6 +8,7 @@ class Author(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     country = models.CharField(max_length=100, blank=True)
+    biography = models.TextField(blank=True)
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
@@ -16,6 +17,7 @@ class Author(models.Model):
 class Publisher(models.Model):
     name = models.CharField(unique=True, max_length=20)
     country = models.CharField(max_length=20, blank=True)
+    description = models.TextField(blank=True)
 
     def __str__(self):
         return self.name
@@ -58,6 +60,7 @@ class Book(models.Model):
     publication_date = models.DateField()
     genre = models.ForeignKey(Genre, on_delete=models.CASCADE)
     subgenre = models.ForeignKey(Subgenre, on_delete=models.CASCADE)
+    
 
     def __str__(self):
         return self.title

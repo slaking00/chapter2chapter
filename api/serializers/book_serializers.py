@@ -1,18 +1,18 @@
 from rest_framework import serializers
-from .models import Book, Author, Genre, Subgenre, Publisher
+from books.models import Book, Author, Genre, Subgenre, Publisher
 
 
 
 class AuthorSerializer(serializers.ModelSerializer):
     class Meta:
         model = Author
-        fields = ['first_name', 'last_name', 'country']
+        fields = ['first_name', 'last_name', 'country', 'biography']
 
 class GenreSerializer(serializers.ModelSerializer):
     class Meta:
         model = Genre
         #fields = 'name'
-        fields = ['name'] #es importante añadirlo entre corchetes aunque sea solo un campo para que lo trate como una tupla y no como un string, del contrario dará error
+        fields = ['name'] #es importante añadirlo entre corchetes aunque sea solo un campo para que lo trate como una tupla y no como un string, de lo contrario dará error
 
 class SubgenreSerializer(serializers.ModelSerializer):
     class Meta:
@@ -23,7 +23,7 @@ class SubgenreSerializer(serializers.ModelSerializer):
 class PublisherSerializer(serializers.ModelSerializer):
     class Meta:
         model = Publisher
-        fields = ['name', 'country']
+        fields = ['name', 'country', 'description']
 
 class BookSerializer(serializers.ModelSerializer):
 
