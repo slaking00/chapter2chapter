@@ -19,9 +19,10 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('books.urls')) #para incluir todas las URL de la app books 
+    path('', include('api.urls')) #para incluir todas las URL de la app books 
 
 ]
 
